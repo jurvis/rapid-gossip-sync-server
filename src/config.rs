@@ -205,6 +205,7 @@ pub(crate) async fn upgrade_db(schema: i32, client: &mut tokio_postgres::Client)
 /// EDIT ME
 pub(crate) fn ln_peers() -> Vec<(PublicKey, SocketAddr)> {
 	vec![
+		// Mainnet
 		// Bitfinex
 		// (hex_utils::to_compressed_pubkey("033d8656219478701227199cbd6f670335c8d408a92ae88b962c49d4dc0e83e025").unwrap(), "34.65.85.39:9735".parse().unwrap()),
 
@@ -215,6 +216,12 @@ pub(crate) fn ln_peers() -> Vec<(PublicKey, SocketAddr)> {
 		// (hex_utils::to_compressed_pubkey("03037dc08e9ac63b82581f79b662a4d0ceca8a8ca162b1af3551595b8f2d97b70a").unwrap(), "104.196.249.140:9735".parse().unwrap())
 
 		// Wallet of Satoshi | 035e4ff418fc8b5554c5d9eea66396c227bd429a3251c8cbc711002ba215bfc226@170.75.163.209:9735
-		(hex_utils::to_compressed_pubkey("035e4ff418fc8b5554c5d9eea66396c227bd429a3251c8cbc711002ba215bfc226").unwrap(), "170.75.163.209:9735".parse().unwrap())
+		// (hex_utils::to_compressed_pubkey("035e4ff418fc8b5554c5d9eea66396c227bd429a3251c8cbc711002ba215bfc226").unwrap(), "170.75.163.209:9735".parse().unwrap())
+
+		// Testnet
+		// 1ML.com
+		(hex_utils::to_compressed_pubkey("02312627fdf07fbdd7e5ddb136611bdde9b00d26821d14d94891395452f67af248").unwrap(), "23.237.77.12:9735".parse().unwrap()),
+		// OpenNode
+		(hex_utils::to_compressed_pubkey("02eadbd9e7557375161df8b646776a547c5cbc2e95b3071ec81553f8ec2cea3b8c").unwrap(), "18.191.253.246:9735".parse().unwrap()),
 	]
 }
